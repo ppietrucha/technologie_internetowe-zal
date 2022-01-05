@@ -1,0 +1,42 @@
+<div class="container" *ngIf="form">
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <div class="mb-3">
+      <label class="form-label" for="exampleFormControlInput1" >Email</label>
+      <input class="form-control" id="exampleFormControlInput1" placeholder="email@wp.com" type="email" formControlName="email">
+    </div>
+
+    <div class="mb-3">
+      <div class="row">
+        <div class="col">
+          <label class="form-label" for="firstname">Imię</label>
+          <input class="form-control" id="firstname" placeholder="Imie" type="text" formControlName="firstName">
+        </div>
+
+        <div class="col">
+          <label class="form-label" for="lastname">Nazwisko</label>
+          <input class="form-control" id="lastname" placeholder="Nazwisko" type="text" formControlName="lastName">
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <div class="row">
+        <div class="col">
+          <label class="form-label" for="from">Od</label>
+          <input class="form-control" id="from" placeholder="od" type="date" formControlName="from" (input)="isFirstDateSelected()">
+        </div>
+
+        <div class="col">
+          <label class="form-label" for="to">Do</label>
+          <input class="form-control" id="to" placeholder="Do" [min]="this.form?.get('from')?.value || ''" type="date" formControlName="to">
+        </div>
+      </div>
+    </div>
+
+    <div class="mb-3">
+      <span>Szacowane koszty: {{price}}</span>
+    </div>
+
+    <button type="submit" class="btn btn-primary w-100" [disabled]="form.invalid">Zamów</button>
+  </form>
+</div>

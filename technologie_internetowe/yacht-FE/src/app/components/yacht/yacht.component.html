@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row g-0">
+    <ng-container *ngFor="let yacht of yachts">
+      <div class="col-md-4">
+        <img [src]="yacht.imageLink" class="img-fluid rounded-start" alt="...">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">{{yacht.name}}</h5>
+          <p class="card-text">cena za godzinę {{yacht.price}} PLN</p>
+          <p class="card-text"><small class="text-muted" [routerLink]="['/description', yacht.id]">Zobacz więcej</small></p>
+        </div>
+      </div>
+
+      <hr>
+    </ng-container>
+  </div>
+</div>

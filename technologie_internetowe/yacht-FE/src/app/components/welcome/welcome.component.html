@@ -1,0 +1,61 @@
+<div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="https://cdn.pixabay.com/photo/2016/11/29/03/43/boat-1867124_960_720.jpg" class="d-block w-100 img-carousel" alt="widok z rufy">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2015/09/21/17/54/rope-950355_960_720.jpg" class="d-block w-100 img-carousel" alt="Kabestan">
+    </div>
+    <div class="carousel-item">
+      <img src="https://cdn.pixabay.com/photo/2020/07/21/20/16/yacht-5427299_960_720.jpg" class="d-block w-100 img-carousel" alt="żaglówka">
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+<hr>
+
+<div class="row " style="justify-content: center; flex-direction: column; align-content: center">
+  <div class="card mb-3" style="max-width: 80%">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img src="https://cdn.pixabay.com/photo/2016/11/06/05/38/boats-1802340_960_720.jpg" class="img-fluid rounded-start p-4" alt="przystań - jezioro">
+      </div>
+      <div class="col-md-8" style="order: 0; display: flex; align-items: center">
+        <div class="card-body">
+          <h5 class="card-title">jachty przybrzeżne</h5>
+          <p class="card-text">Jednostki zaprojektowane do rejsów po wodach przybrzeżnych, dużych zatokach, zalewach, jeziorach i rzekach, w warunkach wiatru o sile do 6°B włącznie i przy fali o wysokości znaczącej do 2 m włącznie</p>
+          <a href="sea.html" class="btn btn-outline-primary" [routerLink]="'type/lake'">sprawdź ofertę</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="card mb-3" style="max-width: 80%">
+    <div class="row g-0">
+      <div class="col-md-4" style="order: 1">
+        <img src="https://cdn.pixabay.com/photo/2020/05/11/17/08/boat-5159224_960_720.jpg" class="img-fluid rounded-start p-4" alt="jacht - morze">
+      </div>
+      <div class="col-md-8" style="order: 0; display: flex; align-items: center">
+        <div class="card-body">
+          <h5 class="card-title">jachty morskie</h5>
+          <p class="card-text">Jednostki zaprojektowane do rejsów pełnomorskich, w warunkach wiatru o sile do 8°B włącznie i przy fali o wysokości znaczącej do 4 m włącznie.</p>
+          <a href="sea.html" class="btn btn-outline-primary" [routerLink]="'type/sea'">sprawdź ofertę</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
